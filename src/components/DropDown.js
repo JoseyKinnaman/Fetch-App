@@ -6,18 +6,20 @@ function DropDown() {
   ]);
 
   React.useEffect(() => {
+    let unmounted = false;
   async function getCategories() {
     const response = await fetch("https://pet-name-api.herokuapp.com/")
     const body = await response.json();
+ 
+    let categories = [];
+    body.forEach(({category}) => {categories.push(category)});
+    let uniqueCats = [...new Set(categories)];
+    console.log(uniqueCats)
   
-    // for(let i=0; i < body.category.length; i ++){
-    // if (body.category[i] =! body.category[i+1]){
-    setItems(body.map(({ category }) => ({label: category, value: category})));
-    console.log(setItems)
-    setLoading(false);
-    }
-//   }
-// }
+    setItems(uniqueCats.map((category) => ({label: category, value: category})));
+      setLoading(false);
+ 
+}
   getCategories();
 }, []);
 
