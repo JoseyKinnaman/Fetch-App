@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {createContext} from 'react';
 import './DropDown.css';
 import CategoryList from './CategoryList';
+// import CategoryList from './CategoryList';
+
+// export const DropDownContext = createContext(null);
 
 function DropDown() {
   const [loading, setLoading] = React.useState(true);
@@ -9,8 +12,9 @@ function DropDown() {
   const [value, setValue] = React.useState();
   const handleSelect = (e) => {
     setValue(e)
+    console.log(e)
   }
-  const DropDownContext = React.createContext(value)
+ 
   React.useEffect(() => {
     let unmounted = false;
   async function getCategories() {
@@ -59,9 +63,8 @@ return(
       <hr/>
     </form>
     <h4>You selected: {value}</h4>
-    <DropDownContext.Provider value={value}>
-    <CategoryList />
-    </DropDownContext.Provider>
+    <CategoryList/>
+   
   </div>
 );
 }
