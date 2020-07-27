@@ -12,9 +12,10 @@ function RandomButton() {
     let unmounted = false;
     async function getRandom() {
       const proxyurl = "https://cors-anywhere.herokuapp.com/";
-      const url = "https://pet-name-api.herokuapp.com/names"
+      const url = "https://pet-name-api.herokuapp.com/names/random"
       const response = await fetch(proxyurl + url)
       const body = await response.json();
+      console.log(body)
       if (!unmounted) {
         setName(
           body.name, body.comment
@@ -31,7 +32,11 @@ function RandomButton() {
     <div id="main-panel" className="ui segment">
       <h3>Get a random pet name suggestion:</h3>
       <button>Random</button>
-      <h5>{body}</h5>
+      <h5
+        disabled={loading}
+        value={value}>
+          {value}</h5>
+          
     </div>
 
   );
