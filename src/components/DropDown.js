@@ -32,6 +32,7 @@ function DropDown() {
 }, []);
 return(
   <div className="ui segment">
+    <h3>View pet names by category.</h3>
   <select
     className="ui form"
     disabled={loading}
