@@ -1,4 +1,5 @@
 import React from 'react';
+import './DropDown.css';
 
 function DropDown() {
   const [loading, setLoading] = React.useState(true);
@@ -31,7 +32,7 @@ function DropDown() {
   };
 }, []);
 return(
-  <div className="ui segment">
+  <div id="main-panel" className="ui segment">
     <h3>View pet names by category.</h3>
   <select
     className="ui form"
@@ -49,6 +50,8 @@ return(
       </option>
     ))}
   </select>
+  <hr/>
+  <button>Sumbit</button>
   </div>
 );
 }
