@@ -4,6 +4,11 @@ import RandomButton from './RadomButton'
 import './App.css'
 
 function App() {
+ 
+  // onDropDownSubmit =(category) => {
+  //   console.log(category)
+  // }
+
   return (
     <div className="ui container" style={{marginTop: '10px'}}>
       <div id="header-panel"  className="ui segment">

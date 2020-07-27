@@ -1,12 +1,16 @@
 import React from 'react';
 import './DropDown.css';
+import CategoryList from './CategoryList';
 
 function DropDown() {
   const [loading, setLoading] = React.useState(true);
   const [items, setItems] = React.useState([{label: "Loading...", value:" "}
   ]);
   const [value, setValue] = React.useState();
-
+  const handleSelect = (e) => {
+    setValue(e)
+  }
+  const DropDownContext = React.createContext(value)
   React.useEffect(() => {
     let unmounted = false;
   async function getCategories() {
@@ -35,24 +39,29 @@ function DropDown() {
 return(
   <div id="main-panel" className="ui segment">
     <h3>View pet names by category.</h3>
-  <select
-    className="ui form"
-    disabled={loading}
-    value={value}
-    onChange={e => setValue(e.currentTarget.value)}
-  >
-    {items.map(({label, value}) => (
-      <option
-        className="field"
-        key={value}
+    <form onSelect={handleSelect}>
+      <select
+        className="ui form"
+        disabled={loading}
         value={value}
+        onChange={e => setValue(e.currentTarget.value)}
       >
-        {label}
-      </option>
-    ))}
-  </select>
-  <hr/>
-  <button>Sumbit</button>
+        {items.map(({label, value}) => (
+          <option
+            className="field"
+            key={value}
+            value={value}
+          >
+            {label}
+          </option>
+        ))}
+      </select>
+      <hr/>
+    </form>
+    <h4>You selected: {value}</h4>
+    <DropDownContext.Provider value={value}>
+    <CategoryList />
+    </DropDownContext.Provider>
   </div>
 );
 }
