@@ -1,6 +1,6 @@
 import React from 'react';
-// import './App.css';
 import DropDown from './DropDown'
+import RandomButton from './RadomButton'
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <h1>Fetch</h1>
       <p>A fun and hip companion animal naming  tool for shelters and humans.</p>
      <DropDown/>
+     <RandomButton/>
     </div>
   );
 }
