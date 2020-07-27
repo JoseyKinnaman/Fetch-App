@@ -10,7 +10,8 @@ function DropDown() {
   React.useEffect(() => {
     let unmounted = false;
   async function getCategories() {
-    const response = await fetch("https://pet-name-api.herokuapp.com/")
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const response = await fetch(proxyurl +"https://pet-name-api.herokuapp.com/")
     const body = await response.json();
     if(!unmounted) {
     let categories = [];
