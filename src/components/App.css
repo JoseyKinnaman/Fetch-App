@@ -38,6 +38,10 @@
 }
 
 #header-panel {
-  background-color: #FFFD82;
+  background-color: #EEBB55;
   text-align: center;
+}
+
+img {
+  width: 30%;
 }

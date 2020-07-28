@@ -44,8 +44,7 @@ Please contact jozypants@gmail.com with questions.
 ### Technologies Used
 
 * React
-* Ruby On Rails
-* Fetch API
+* Fetch API (Ruby On Rails)
 * JavaScript
 * JSX
 * HTML
@@ -54,7 +53,6 @@ Please contact jozypants@gmail.com with questions.
 ### Specs
 | Spec | Input | Output |
 | :------------- | :------------- | :------------- |
-| **User can select a pet's sex** | User Input:"Female" | Output: “Female selected" |
 | **User can select a category** | User Input:"Old People Names" | Output: "List of names displayed" |
 | **User can search by random** | User Input:"Random" | Output: "A random pet name displayed" |
 

@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import DropDown from './DropDown'
 import RandomButton from './RadomButton'
+import logo from '../assets/logo.png'
+
 import './App.css'
 
 function App() {
@@ -8,13 +10,12 @@ function App() {
   return (
     <div className="ui container" style={{marginTop: '10px'}}>
       <div id="header-panel" className="ui segment">
-      <h1>Fetch</h1>
-      <p>A fun and hip companion animal naming  tool for shelters and humans.</p>
+        <img src={logo}/>
+      
+      <h2>A fun and hip companion animal naming  tool for shelters and humans.</h2>
       </div>
-      {/* <DropDownProvider value="hello I work"> */}
         <DropDown/>
         <RandomButton/>
-    {/* </DropDownProvider> */}
     </div>
   );
 }

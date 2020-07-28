@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DropDown } from "./DropDown"
-import './CategoryList.css'
+import './NamesList.css'
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
@@ -21,10 +20,11 @@ const  NamesList = ({currentCategory}) => {
   return (
     <div id="inner-segment" className="ui segment">
       {names.map(name => <div key={name.id}>
-        <h5>{name.name}</h5> 
-        
-        <p>{name.comment}</p>
-          <hr/></div>)}
+        <ul>
+          <li><h5>{name.name}</h5>
+          <p>{name.comment}</p></li>
+        </ul>
+          </div>)}
     </div>
 
   );
