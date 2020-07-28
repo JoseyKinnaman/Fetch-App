@@ -13,16 +13,16 @@ function DropDown() {
  
   useEffect(async () => {
     setLoading(true)
-    const response = await fetch(proxyurl +"https://pet-name-api.herokuapp.com/")
+    const response = await fetch(`${proxyurl}https://pet-name-api.herokuapp.com/`)
     const body = await response.json();
     let categories = [];
     body.forEach(({category}) => {categories.push(category)});
-    let uniqueCats = [...new Set(categories)].map((category) => ({
+    let singleCategories = [...new Set(categories)].map((category) => ({
       label: category, 
       value: category
     }));
       
-    setItems(uniqueCats)
+    setItems(singleCategories)
     setLoading(false);
   }, []);
 

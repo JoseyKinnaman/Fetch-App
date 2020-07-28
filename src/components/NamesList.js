@@ -21,7 +21,10 @@ const  NamesList = ({currentCategory}) => {
   return (
     <div id="inner-segment" className="ui segment">
       {names.map(name => <div key={name.id}>
-        {name.name}</div>)}
+        <h5>{name.name}</h5> 
+        
+        <p>{name.comment}</p>
+          <hr/></div>)}
     </div>
 
   );
