@@ -5,7 +5,7 @@ import NamesList from './NamesList';
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
-function DropDown() {
+const DropDown = () => {
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
   const [currentCategory, setCurrentCategory] = useState();

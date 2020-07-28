@@ -4,7 +4,7 @@ import './NamesList.css'
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 const  NamesList = ({currentCategory}) => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [names, setNames] = useState([]);
   useEffect(() => {
     async function fetchData() {

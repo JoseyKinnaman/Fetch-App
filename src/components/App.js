@@ -14,8 +14,8 @@ function App() {
       
       <h2>A fun and hip companion animal naming  tool for shelters and humans.</h2>
       </div>
+        <RandomButton />
         <DropDown/>
-        <RandomButton/>
     </div>
   );
 }

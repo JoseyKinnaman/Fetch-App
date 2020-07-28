@@ -29,7 +29,7 @@ function RandomButton() {
     };
   }, []);
   return (
-    <div id="main-panel" className="ui segment">
+    <div id="panel" className="ui segment">
       <h3>Get a random pet name suggestion:</h3>
       <button>Random</button>
       <h5
