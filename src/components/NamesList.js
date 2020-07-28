@@ -9,6 +9,7 @@ const  NamesList = ({currentCategory}) => {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(`${proxyurl}https://pet-name-api.herokuapp.com/names?category=${currentCategory}`)
+
       const body = await response.json();
       setNames(body)
     }
