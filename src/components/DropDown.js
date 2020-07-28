@@ -28,12 +28,12 @@ const DropDown = () => {
     }
   getCategory();
   }, []);
-
-  useEffect(() => {
-    if (items && items.length) {
-      setCurrentCategory(items[0].value)
-    }
-  }, [items])
+console.log(currentCategory)
+  // useEffect(() => {
+  //   if (items && items.length) {
+  //     setCurrentCategory(items[0].value)
+  //   }
+  // }, [items])
 
   return (
     <div id="main-panel" className="ui segment">
@@ -60,8 +60,14 @@ const DropDown = () => {
           <hr/>
         </form>
       }
-      <h4>You selected: {currentCategory}</h4>
-      <NamesList currentCategory={currentCategory}/>
+     
+      { currentCategory !== undefined ?(
+        <NamesList currentCategory={currentCategory} />
+      ) : (
+        <div>Choose a category</div>
+
+      )}
+      
     </div>
   );
 }
