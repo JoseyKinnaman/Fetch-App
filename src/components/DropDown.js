@@ -11,8 +11,9 @@ const DropDown = () => {
   const [currentCategory, setCurrentCategory] = useState();
   
  
-  useEffect(async () => {
+  useEffect(() => {
     setLoading(true)
+    async function getCategory(){
     const response = await fetch(`${proxyurl}https://pet-name-api.herokuapp.com/`)
     const body = await response.json();
     let categories = [];
@@ -24,6 +25,8 @@ const DropDown = () => {
       
     setItems(singleCategories)
     setLoading(false);
+    }
+  getCategory();
   }, []);
 
   useEffect(() => {
@@ -31,7 +34,6 @@ const DropDown = () => {
       setCurrentCategory(items[0].value)
     }
   }, [items])
-
 
   return (
     <div id="main-panel" className="ui segment">

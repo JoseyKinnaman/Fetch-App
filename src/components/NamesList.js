@@ -11,7 +11,6 @@ const  NamesList = ({currentCategory}) => {
       const response = await fetch(`${proxyurl}https://pet-name-api.herokuapp.com/names?category=${currentCategory}`)
 
       const body = await response.json();
-      console.log(body)
       setNames(body)
     }
     fetchData();
