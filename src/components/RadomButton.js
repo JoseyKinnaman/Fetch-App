@@ -18,7 +18,7 @@ function RandomButton() {
   return (
     <div id="panel" className="ui segment">
       <h3>Get a random pet name suggestion:</h3>
-      <button>Random </button>
+      <button OnClick={useEffect}>Random </button>
         <hr/>
         <h5>{randomName.name}</h5>
         <p>{randomName.comment}</p>
