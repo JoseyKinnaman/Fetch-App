@@ -9,8 +9,6 @@ const DropDown = () => {
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
   const [currentCategory, setCurrentCategory] = useState();
-  
- 
   useEffect(() => {
     setLoading(true)
     async function getCategory(){
@@ -22,22 +20,14 @@ const DropDown = () => {
       label: category, 
       value: category
     }));
-      
     setItems(singleCategories)
     setLoading(false);
     }
   getCategory();
   }, []);
-console.log(currentCategory)
-  // useEffect(() => {
-  //   if (items && items.length) {
-  //     setCurrentCategory(items[0].value)
-  //   }
-  // }, [items])
-
-  return (
+return (
     <div id="main-panel" className="ui segment">
-      <h3>View pet names by category.</h3>
+      <h3>Pet Names By Category</h3>
       {loading
         ? 'Loading...' 
         : <form >
@@ -53,19 +43,17 @@ console.log(currentCategory)
                 key={value}
                 value={value}
               >
-                {label}
+              {label}
               </option>
             ))}
-          </select>
+            </select>
           <hr/>
         </form>
       }
-     
       { currentCategory !== undefined ?(
         <NamesList currentCategory={currentCategory} />
       ) : (
-        <div>Choose a category</div>
-
+        <h5>Please select a category</h5>
       )}
       
     </div>
