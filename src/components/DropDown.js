@@ -32,20 +32,19 @@ return (
       ? <div class="ui active inverted dimmer">
         <div class="ui text loader">Loading</div>
       </div>
-        : <form >
+        : <form>
           <select
-            // className="ui form"
-            // disabled={loading}
+            className="ui selection dropdown"
             value={currentCategory}
             onChange={e => setCurrentCategory(e.currentTarget.value)}
           >
             {items.map(({label, value}) => (
               <option
-                className="field"
+                className="item"
                 key={value}
                 value={value}
               >
-              {label}
+                {label}
               </option>
             ))}
             </select>
@@ -57,7 +56,6 @@ return (
       ) : (
         <h5>Please select a category</h5>
       )}
-      
     </div>
   );
 }

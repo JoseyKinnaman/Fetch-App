@@ -18,7 +18,7 @@ const  NamesList = ({currentCategory}) => {
       <h4>{currentCategory}</h4>
       {names.map(name => <div key={name.id}>
         <ul>
-          <li><h5>{name.name}</h5>
+          <li><h4>{name.name}</h4>
           <p>{name.comment}</p></li>
         </ul>
       </div>)}
