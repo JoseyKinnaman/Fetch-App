@@ -7,9 +7,11 @@
 
 _A pet naming app that helps pet owners and shelters find really fun, quirky, and hip names for their pets. Built as an Epicodus independent capstone project. Corresponds to the Fetcher Api_
 
-![Wireframe](src/img/)
+![Wireframe](src/assets/Fetch.png)
 
 ### Instructions for use:
+
+visit here https://fetchnamer.netlify.app/ or ...
 
 1. Open Terminal (macOS) or PowerShell (Windows)
 2. To download the project Directory to your desktop enter the following commands:
@@ -96,4 +98,4 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 
 Is there anything else you'd like your instructor to know? 
 
-API is here: https://github.com/JoseyKinnaman/Fetch.git
+API is here: https://github.com/JoseyKinnaman/fetcher_api.git
