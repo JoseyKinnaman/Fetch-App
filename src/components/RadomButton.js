@@ -13,7 +13,10 @@ function RandomButton() {
   return (
     <div id="panel" className="ui segment">
       <h3>Get a random pet name suggestion:</h3>
-      <button  onClick={getRandom}  >Random </button>
+      <div onClick={getRandom}  class="ui animated fade button" tabindex="0">
+        <div class="visible content">''Do I feel lucky?'</div>
+        <div class="hidden content">well, do ya?</div>
+      </div>
       <hr />
       <h5>{randomName.name}</h5>
       <p>{randomName.comment}</p>
