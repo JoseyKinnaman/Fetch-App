@@ -15,7 +15,7 @@ _A pet naming app that helps pet owners and shelters find really fun, quirky, an
 2. To download the project Directory to your desktop enter the following commands:
 ```
 cd Desktop
-git clone https://github.com/JoseyKinnaman/fetch.git
+git clone https://github.com/JoseyKinnaman/Fetch-App.git
 cd fetch
 ```
 3. To view the downloaded files, open them in a text editor or IDE of your choice.
@@ -35,7 +35,7 @@ npm run start
 
 ### Known Bugs
 
-Still planning.
+No known bugs... just typos in the API. 
 
 ### Support and Contact Information
 
@@ -44,7 +44,7 @@ Please contact jozypants@gmail.com with questions.
 ### Technologies Used
 
 * React
-* Fetch API (Ruby On Rails)
+* Fetcher API (Ruby On Rails)
 * JavaScript
 * JSX
 * HTML
