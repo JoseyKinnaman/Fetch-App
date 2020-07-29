@@ -34,8 +34,8 @@ return (
       </div>
         : <form >
           <select
-            className="ui form"
-            disabled={loading}
+            // className="ui form"
+            // disabled={loading}
             value={currentCategory}
             onChange={e => setCurrentCategory(e.currentTarget.value)}
           >
