@@ -29,7 +29,9 @@ return (
     <div id="main-panel" className="ui segment">
       <h3>Pet Names By Category</h3>
       {loading
-        ? 'Loading...' 
+      ? <div class="ui active inverted dimmer">
+        <div class="ui text loader">Loading</div>
+      </div>
         : <form >
           <select
             className="ui form"
